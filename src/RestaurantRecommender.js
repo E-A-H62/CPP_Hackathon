@@ -6,6 +6,7 @@ const RestaurantRecommender = () => {
     const [cuisine, setCuisine] = useState('');
     const navigate = useNavigate();
 
+    // https://medium.com/@bobjunior542/using-usenavigate-in-react-router-6-a-complete-guide-46f51403f430
     const handleSubmit = (event) => {
         event.preventDefault();
         // Can handle form submission here

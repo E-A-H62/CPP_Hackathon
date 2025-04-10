@@ -1,6 +1,7 @@
 import Restaurant from './Restaurant';
 import SavedRestaurant from './SavedRestaurant';
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const RestaurantPage = () => {
     // using dummy data to display on webpage
@@ -9,6 +10,12 @@ const RestaurantPage = () => {
     const restaurant3 = new Restaurant("Burger Barn", "American", "321 Maple St", 4.0);
     const restaurants = [restaurant1, restaurant2, restaurant3];
     const savedRestaurant = new SavedRestaurant("Sushi Spot", "Japanese", "456 Elm St", 4.8, ["Sushi", "Ramen"]);
+    const navigate = useNavigate();
+
+    const goBack = (event) => {
+        event.preventDefault();
+        navigate('/recommender');
+    };
 
     return (
         <div>
@@ -33,6 +40,11 @@ const RestaurantPage = () => {
                 <p>Menu: {savedRestaurant.getMenu().join(", ")}</p>
                 <p>Is Saved: {savedRestaurant.getIsSaved() ? "Yes" : "No"}</p>
             </div>
+
+            <form onSubmit={goBack}>
+                <button type="submit" className="btn btn-primary">Go Back</button>
+            </form>
+
         </div>
     );
 }
