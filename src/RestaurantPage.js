@@ -1,7 +1,7 @@
 import Restaurant from './Restaurant';
 import SavedRestaurant from './SavedRestaurant';
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 const RestaurantPage = () => {
     // using dummy data to display on webpage
@@ -12,6 +12,12 @@ const RestaurantPage = () => {
     const savedRestaurant = new SavedRestaurant("Sushi Spot", "Japanese", "456 Elm St", 4.8, ["Sushi", "Ramen"]);
     const navigate = useNavigate();
 
+    //https://stackoverflow.com/questions/69714423/how-do-you-pass-data-when-using-the-navigate-function-in-react-router-v6
+    //https://dev.to/esedev/how-to-pass-and-access-data-from-one-route-to-another-with-uselocation-usenavigate-usehistory-hooks-1g5m
+    const {state} = useLocation();
+    const {location, cuisine} = state;
+
+
     const goBack = (event) => {
         event.preventDefault();
         navigate('/recommender');
@@ -19,6 +25,10 @@ const RestaurantPage = () => {
 
     return (
         <div>
+            <h1>What you wanted:</h1>
+            <p>Location: {location}</p>
+            <p>Cuisine: {cuisine}</p>
+
             <h1>Restaurant Details</h1>
             {restaurants.map((restaurant, index) => (
                 <div key={index}>

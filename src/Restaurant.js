@@ -6,6 +6,7 @@ class Restaurant {
         this.cuisine = cuisine;
         this.location = location;
         this.rating = rating;
+        this.isSaved = false;
     }
 
     getDetails() {
@@ -22,6 +23,10 @@ class Restaurant {
 
     getRating() {
         return this.rating;
+    }
+
+    getIsSaved() {
+        return this.isSaved;
     }
 }
 

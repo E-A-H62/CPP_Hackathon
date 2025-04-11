@@ -13,7 +13,8 @@ const RestaurantRecommender = () => {
         // For example, send data to backend or perform any logic
         console.log('Location:', location);
         console.log('Cuisine:', cuisine);
-        navigate('/restaurant');
+        //navigate('/restaurant');
+        navigate('/restaurant', { state: { location, cuisine } });
     };
 
     return (
