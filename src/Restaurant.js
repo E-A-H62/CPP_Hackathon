@@ -13,6 +13,10 @@ class Restaurant {
         return `Restaurant: ${this.name}, Cuisine: ${this.cuisine}, Location: ${this.location}, Rating: ${this.rating}`;
     }
 
+    getName() {
+        return this.name;
+    }
+
     getCuisine() {
         return this.cuisine;
     }

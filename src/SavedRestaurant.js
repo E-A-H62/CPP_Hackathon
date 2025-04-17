@@ -11,6 +11,22 @@ class SavedRestaurant extends Restaurant {
     getDetails() {
         return `Saved Restaurant: ${this.name}, Cuisine: ${this.cuisine}, Location: ${this.location}, Rating: ${this.rating}`;
     }
+    
+    getName() {
+        return this.name;
+    }
+
+    getCuisine() {
+        return this.cuisine;
+    }
+
+    getLocation() {
+        return this.location;
+    }
+
+    getRating() {
+        return this.rating;
+    }
 
     getMenu() {
         return this.menu; // Returns the menu of the saved restaurant
