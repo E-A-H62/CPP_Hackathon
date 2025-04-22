@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const RestaurantRecommender = () => {
@@ -17,9 +17,20 @@ const RestaurantRecommender = () => {
         navigate('/restaurant', { state: { location, cuisine } });
     };
 
+    // https://medium.com/@alexandr.fework/curl-is-a-command-line-tool-used-for-making-http-requests-e2ab67aa4672
+    const [data, setData] = useState([]);
+
+    useEffect(() => {
+        fetch('http://localhost:8080/api/restaurants?tags=Chicken,Korean')
+            .then(response => response.json())
+            .then(data => setData(data))
+            .catch(error => console.error('Error fetching data:', error));
+    }, []);
+
     return (
         <div className="container">
             <h1>Welcome to our Restaurant Recommender</h1>
+            <pre>{JSON.stringify(data)}</pre>
             <form onSubmit={handleSubmit}>
                 <div className="form-group">
                     <label htmlFor="location">Around what zipcode do you want to find restaurants?</label>

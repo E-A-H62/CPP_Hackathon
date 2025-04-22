@@ -1,70 +1,101 @@
-# Getting Started with Create React App
+# Project Title
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+_Easy Eats_
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## Team Members
 
-### `npm start`
+- **Elena Hernandez** – Frontend Developer
+- **Jairus Legion** – Backend Developer
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Project Description
 
-### `npm test`
+Easy Eats is a modern web application designed to help users discover and choose restaurants based on their preferences and needs. Our platform simplifies the dining decision-making process by providing personalized restaurant recommendations.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Key Features:
+- Intuitive restaurant search and filtering
+- User-friendly interface with modern design
+- Restaurant details including cuisine type, and ratings
 
-### `npm run build`
+Target Audience:
+- Individuals/groups having trouble deciding where to eat
+- Tourists seeking local restaurant recommendations
+- Anyone interested in exploring dining options in their area
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## How to Run
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Follow these steps to set up and run the project:
 
-### `npm run eject`
+1. **Prerequisites:**
+   - Node.js (v18 or higher)
+   - npm (Node Package Manager)
+   - Git
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+2. **Frontend Setup:**
+   ```bash
+   # Clone the repository
+   git clone [repository-url]
+   
+   # Navigate to the project directory
+   cd restaurant-recommender
+   
+   # Install dependencies
+   npm install
+   
+   # Start the development server
+   npm run dev
+   ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The application will be available at `http://localhost:3000` (or your configured port).
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Features Implemented
 
-## Learn More
+Frontend:
+- [x] Interactive restaurant search interface
+- [x] Restaurant cards with detailed information
+- [x] Filter and sort functionality
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Backend:
+- [x] API endpoints
+- [x] Restaurant data management
+- [x] Search and filtering logic
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
+## Future Work
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- [ ] User authentication and profiles
+- [ ] Improve favorite restaurants feature
+- [ ] Restaurant reviews and ratings
+- [ ] Advanced search filters
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Known Issues
 
-### Making a Progressive Web App
+- Current API returns results from specific state
+- Working on improving search result relevancy
+- Fine-tuning mobile responsiveness for various screen sizes
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+---
 
-### Advanced Configuration
+## Screenshots
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+_Screenshots of the application will be added as development progresses._
 
-### Deployment
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Tech Stack
 
-### `npm run build` fails to minify
+_Optional but recommended — Add images or GIFs here to demonstrate the UI, gameplay, or interesting elements._
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+![Screenshot Title](path/to/screenshot.png)
+
+---
