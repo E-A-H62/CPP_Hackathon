@@ -35,6 +35,8 @@ Follow these steps to set up and run the project:
    - Node.js (v18 or higher)
    - npm (Node Package Manager)
    - Git
+   - Java JDK 17 or higher
+   - Maven or Gradle
 
 2. **Frontend Setup:**
    ```bash
@@ -48,10 +50,39 @@ Follow these steps to set up and run the project:
    npm install
    
    # Start the development server
-   npm run dev
+   npm start
    ```
 
-The application will be available at `http://localhost:3000` (or your configured port).
+3. **Backend Setup:**
+   [ADD TO THIS]
+
+The frontend application will be available at `http://localhost:3000` (or your configured port).
+The backend API will be available at `http://localhost:8080` (EDIT AS NEEDED).
+
+---
+
+## Project Structure
+
+### Backend (Java/Spring Boot)
+
+The backend is built with Spring Boot and follows a layered architecture:
+
+- **RestaurantCuisineApplication.java**: Main application class that serves as the entry point for the Spring Boot application.
+- **Restaurants.java**: Entity class representing a restaurant in the database with properties like name, description, and address.
+- **RestaurantRepository.java**: Repository interface that extends JpaRepository to provide CRUD operations for restaurant data.
+- **RestaurantsService.java**: Service class containing business logic for restaurant operations, including filtering by tags.
+- **RestaurantController.java**: REST controller that exposes API endpoints for retrieving restaurant information.
+
+### Frontend (React)
+
+The frontend is built with React and includes:
+
+- **App.js**: Main application component that sets up routing and context providers.
+- **RestaurantRecommender.js**: Component for searching and filtering restaurants.
+- **RestaurantPage.js**: Component for displaying restaurant details and saved restaurants.
+- **Restaurant.js** and **SavedRestaurant.js**: Classes representing restaurant data models.
+- **RestaurantsContext.js**: Context provider for managing saved restaurants across components.
+- **Login.js**: Component for user authentication.
 
 ---
 
@@ -94,8 +125,14 @@ _Screenshots of the application will be added as development progresses._
 
 ## Tech Stack
 
-_Optional but recommended — Add images or GIFs here to demonstrate the UI, gameplay, or interesting elements._
+### Backend
+- Java 17
+- Spring Boot
 
-![Screenshot Title](path/to/screenshot.png)
+### Frontend
+- React
+- React Router
+- Context API for state management
+- CSS for styling
 
 ---

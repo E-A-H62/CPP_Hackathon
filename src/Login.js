@@ -1,11 +1,28 @@
+/**
+ * Login component that handles user authentication.
+ * @module Login
+ */
+
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
+/**
+ * Login component that provides a form for user authentication.
+ * Handles user input and navigation to the recommender page upon successful login.
+ * @returns {JSX.Element} The rendered Login component
+ */
 const Login = () => {
+    /** @type {[string, Function]} State for username input */
     const [username, setUsername] = useState('');
+    /** @type {[string, Function]} State for password input */
     const [password, setPassword] = useState('');
+    /** @type {Function} Navigation hook from react-router */
     const navigate = useNavigate();
 
+    /**
+     * Handles form submission and navigation to recommender page
+     * @param {Event} event - The form submission event
+     */
     const handleSubmit = (event) => {
         event.preventDefault();
         // Can handle login logic here

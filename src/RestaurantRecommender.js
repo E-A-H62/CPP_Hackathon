@@ -1,12 +1,32 @@
+/**
+ * RestaurantRecommender component that allows users to search for restaurants
+ * based on location and cuisine preferences.
+ * @module RestaurantRecommender
+ */
+
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
+/**
+ * Main component for restaurant recommendation functionality.
+ * Handles user input for location and cuisine preferences, and fetches restaurant data.
+ * @returns {JSX.Element} The rendered RestaurantRecommender component
+ */
 const RestaurantRecommender = () => {
+    /** @type {[string, Function]} Location state for zipcode input */
     const [location, setLocation] = useState('');
+    /** @type {[string, Function]} Cuisine state for cuisine type input */
     const [cuisine, setCuisine] = useState('');
+    /** @type {Function} Navigation hook from react-router */
     const navigate = useNavigate();
+    /** @type {[Array, Function]} State for storing fetched restaurant data */
+    const [data, setData] = useState([]);
 
-    // https://medium.com/@bobjunior542/using-usenavigate-in-react-router-6-a-complete-guide-46f51403f430
+    // Reference - https://medium.com/@bobjunior542/using-usenavigate-in-react-router-6-a-complete-guide-46f51403f430
+    /**
+     * Handles form submission and navigation to restaurant page
+     * @param {Event} event - The form submission event
+     */
     const handleSubmit = (event) => {
         event.preventDefault();
         // Can handle form submission here
@@ -17,9 +37,11 @@ const RestaurantRecommender = () => {
         navigate('/restaurant', { state: { location, cuisine } });
     };
 
-    // https://medium.com/@alexandr.fework/curl-is-a-command-line-tool-used-for-making-http-requests-e2ab67aa4672
-    const [data, setData] = useState([]);
-
+    // Reference = https://medium.com/@alexandr.fework/curl-is-a-command-line-tool-used-for-making-http-requests-e2ab67aa4672
+    /**
+     * Effect hook to fetch restaurant data when component mounts
+     * Makes an API call to get restaurants with specific tags
+     */
     useEffect(() => {
         fetch('http://localhost:8080/api/restaurants?tags=Chicken,Korean')
             .then(response => response.json())
