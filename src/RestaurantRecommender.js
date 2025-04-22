@@ -33,7 +33,6 @@ const RestaurantRecommender = () => {
         // For example, send data to backend or perform any logic
         console.log('Location:', location);
         console.log('Cuisine:', cuisine);
-        //navigate('/restaurant');
         navigate('/restaurant', { state: { location, cuisine } });
     };
 
@@ -49,38 +48,154 @@ const RestaurantRecommender = () => {
             .catch(error => console.error('Error fetching data:', error));
     }, []);
 
+    // Styles
+    const containerStyle = {
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+        minHeight: '100vh',
+        maxWidth: '800px',
+        margin: '0 auto',
+        padding: '20px',
+        textAlign: 'center'
+    };
+
+    const headerStyle = {
+        marginBottom: '30px',
+        width: '100%'
+    };
+
+    const titleStyle = {
+        fontSize: '2.5rem',
+        color: '#333',
+        marginBottom: '10px'
+    };
+
+    const subtitleStyle = {
+        fontSize: '1.2rem',
+        color: '#666'
+    };
+
+    const formContainerStyle = {
+        width: '100%',
+        maxWidth: '500px',
+        backgroundColor: 'white',
+        borderRadius: '8px',
+        boxShadow: '0 2px 10px rgba(0, 0, 0, 0.1)',
+        padding: '30px',
+        marginBottom: '30px'
+    };
+
+    const formStyle = {
+        display: 'flex',
+        flexDirection: 'column',
+        gap: '20px'
+    };
+
+    const formGroupStyle = {
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'flex-start',
+        textAlign: 'left'
+    };
+
+    const labelStyle = {
+        marginBottom: '8px',
+        fontWeight: '500',
+        color: '#444'
+    };
+
+    const inputStyle = {
+        width: '100%',
+        padding: '12px',
+        border: '1px solid #ddd',
+        borderRadius: '4px',
+        fontSize: '1rem',
+        transition: 'border-color 0.3s'
+    };
+
+    const buttonStyle = {
+        padding: '12px 20px',
+        backgroundColor: '#6a11cb',
+        color: 'white',
+        border: 'none',
+        borderRadius: '4px',
+        cursor: 'pointer',
+        fontSize: '1rem',
+        transition: 'background-color 0.3s',
+        marginTop: '10px'
+    };
+
+    const dataPreviewStyle = {
+        width: '100%',
+        maxWidth: '800px',
+        backgroundColor: 'white',
+        borderRadius: '8px',
+        boxShadow: '0 2px 10px rgba(0, 0, 0, 0.1)',
+        padding: '20px',
+        marginTop: '30px',
+        textAlign: 'left'
+    };
+
+    const dataContainerStyle = {
+        maxHeight: '300px',
+        overflowY: 'auto',
+        padding: '10px',
+        backgroundColor: '#f8f9fa',
+        borderRadius: '4px'
+    };
+
     return (
-        <div className="container">
-            <h1>Welcome to our Restaurant Recommender</h1>
-            <pre>{JSON.stringify(data)}</pre>
-            <form onSubmit={handleSubmit}>
-                <div className="form-group">
-                    <label htmlFor="location">Around what zipcode do you want to find restaurants?</label>
-                    <input
-                        type="number"
-                        className="form-control"
-                        id="location"
-                        name="location"
-                        min="0"
-                        max="99999999"
-                        step="1"
-                        value={location}
-                        onChange={(e) => setLocation(e.target.value)}
-                    />
+        <div style={containerStyle}>
+            <div style={headerStyle}>
+                <h1 style={titleStyle}>Welcome to Easy Eats</h1>
+                <p style={subtitleStyle}>Find the perfect restaurant for your taste</p>
+            </div>
+            
+            <div style={formContainerStyle}>
+                <form onSubmit={handleSubmit} style={formStyle}>
+                    <div style={formGroupStyle}>
+                        <label htmlFor="location" style={labelStyle}>Around what zipcode do you want to find restaurants?</label>
+                        <input
+                            type="number"
+                            style={inputStyle}
+                            id="location"
+                            name="location"
+                            min="0"
+                            max="99999999"
+                            step="1"
+                            value={location}
+                            onChange={(e) => setLocation(e.target.value)}
+                            placeholder="Enter zipcode"
+                        />
+                    </div>
+                    <div style={formGroupStyle}>
+                        <label htmlFor="cuisine" style={labelStyle}>What type of cuisine sounds good?</label>
+                        <input
+                            type="text"
+                            style={inputStyle}
+                            id="cuisine"
+                            name="cuisine"
+                            value={cuisine}
+                            onChange={(e) => setCuisine(e.target.value)}
+                            placeholder="e.g., Italian"
+                        />
+                    </div>
+                    <button type="submit" style={buttonStyle}>Find Restaurants</button>
+                </form>
+            </div>
+            
+            {data.length > 0 && (
+                <div style={dataPreviewStyle}>
+                    <h2 style={{ marginBottom: '15px', color: '#333' }}>API Data Preview</h2>
+                    <div style={dataContainerStyle}>
+                        <pre style={{ margin: 0, whiteSpace: 'pre-wrap', wordBreak: 'break-word' }}>
+                            {JSON.stringify(data, null, 2)}
+                        </pre>
+                    </div>
                 </div>
-                <div className="form-group">
-                    <label htmlFor="cuisine">What type of cuisine sounds good?</label>
-                    <input
-                        type="text"
-                        className="form-control"
-                        id="cuisine"
-                        name="cuisine"
-                        value={cuisine}
-                        onChange={(e) => setCuisine(e.target.value)}
-                    />
-                </div>
-                <button type="submit" className="btn btn-primary">Submit</button>
-            </form>
+            )}
         </div>
     );
 };

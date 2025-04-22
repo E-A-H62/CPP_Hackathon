@@ -1,6 +1,103 @@
 .tile {
-    background-color: #f0f0f0;
-    border: 1px solid #ccc;
-    padding: 20px;
-    text-align: center;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.tile:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.tile p {
+    margin-bottom: 12px;
+    color: #555;
+    font-size: 0.95rem;
+}
+
+.tile p:first-child {
+    font-weight: 600;
+    color: #333;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+.tile button {
+    margin-top: 15px;
+    width: 100%;
+}
+
+/* Restaurant details styling */
+.tile .restaurant-name {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.tile .restaurant-cuisine {
+    display: inline-block;
+    background-color: #f0f7ff;
+    color: #2575fc;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.tile .restaurant-rating {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.tile .restaurant-rating::before {
+    content: "★";
+    color: #ffc107;
+    margin-right: 5px;
+}
+
+.tile .restaurant-location {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.tile .restaurant-location::before {
+    content: "📍";
+    margin-right: 5px;
+}
+
+.tile .restaurant-menu {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+}
+
+.tile .restaurant-menu-title {
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.tile .menu-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.tile .menu-item {
+    background-color: #f8f9fa;
+    padding: 4px 10px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    color: #555;
 }
