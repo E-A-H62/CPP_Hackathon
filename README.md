@@ -8,6 +8,7 @@ _Easy Eats_
 
 - **Elena Hernandez** – Frontend Developer
 - **Jairus Legion** – Backend Developer
+- **Pegah Tajvidi** – Outside Collaborator
 
 ---
 
