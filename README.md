@@ -102,7 +102,9 @@ Backend:
 ---
 
 ## Future Work
+We managed to implement the different components of this application, but we did not have enough time to fully integrate them. However, we can expand upon this projuect in the future to ensure the application integrates the components in order to create a functioning restaurant recommender application. Some of the features we plan to improve include:
 
+- [ ] Integrating frontend and backend
 - [ ] User authentication and profiles
 - [ ] Improve favorite restaurants feature
 - [ ] Restaurant reviews and ratings
@@ -120,7 +122,14 @@ Backend:
 
 ## Screenshots
 
-_Screenshots of the application will be added as development progresses._
+### Login Page
+![Login Page](public/screenshots/login.png)
+
+### Preferences Page
+![Preferences Page](public/screenshots/preferences.png)
+
+### Recommender Page
+![Recommender Page](public/screenshots/recommender.png)
 
 ---
 
