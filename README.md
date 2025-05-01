@@ -123,13 +123,13 @@ We managed to implement the different components of this application, but we did
 ## Screenshots
 
 ### Login Page
-![Login Page](public/screenshots/login.png)
+![Login Page](public/screenshots/login_img.png)
 
 ### Preferences Page
-![Preferences Page](public/screenshots/preferences.png)
+![Preferences Page](public/screenshots/preferences_img.png)
 
 ### Recommender Page
-![Recommender Page](public/screenshots/recommender.png)
+![Recommender Page](public/screenshots/recommender_img.png)
 
 ---
 
