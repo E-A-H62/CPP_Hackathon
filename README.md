@@ -55,7 +55,22 @@ Follow these steps to set up and run the project:
    ```
 
 3. **Backend Setup:**
-   [ADD TO THIS]
+4. **Prerequisites:**
+   - Java JDK 17
+   - Docker
+   - Docker Compose
+
+2. **Backend Setup:**
+```bash
+# Unzip the project and navigate into the directory
+cd restaurant-app
+
+# (Linux/macOS only) Make the startup script executable
+chmod +x wait-for-postgres.sh
+
+# Build and start the application using Docker Compose
+docker-compose up --build
+```
 
 The frontend application will be available at `http://localhost:3000` (or your configured port).
 The backend API will be available at `http://localhost:8080` (EDIT AS NEEDED).
