@@ -60,7 +60,7 @@ Follow these steps to set up and run the project:
    - Docker
    - Docker Compose
 
-2. **Backend Setup:**
+5. **Backend Setup:**
 ```bash
 # Unzip the project and navigate into the directory
 cd restaurant-app
