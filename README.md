@@ -2,6 +2,8 @@
 
 _Easy Eats_
 
+Video Demo: https://www.youtube.com/watch?v=ThOE5Sn1Cp8
+
 ---
 
 ## Team Members
