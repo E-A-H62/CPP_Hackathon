@@ -1,6 +1,4 @@
-# Project Title
-
-_Easy Eats_
+# Easy Eats
 
 Video Demo: https://www.youtube.com/watch?v=ThOE5Sn1Cp8
 
