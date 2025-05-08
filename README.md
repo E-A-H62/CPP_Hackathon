@@ -72,7 +72,7 @@ docker-compose up --build
    - Docker Compose
 
 The frontend application will be available at `http://localhost:3000` (or your configured port).
-The backend API will be available at `http://localhost:8080` (EDIT AS NEEDED).
+The backend API will be available at `http://localhost:8080/api/restaurants?tags=` for the regular view and `http://localhost:8080/api/restaurants/download?tags=` for the .json files.
 
 ---
 
