@@ -2,6 +2,8 @@
 
 Video Demo: https://www.youtube.com/watch?v=ThOE5Sn1Cp8
 
+Project Slides: https://www.canva.com/design/DAGnAS4kDzs/F6k8FATVv6EXFC9lTnCkLg/edit?utm_content=DAGnAS4kDzs&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+
 ---
 
 ## Team Members
