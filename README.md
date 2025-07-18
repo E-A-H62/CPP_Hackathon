@@ -160,5 +160,3 @@ We managed to implement the different components of this application, but we did
 - React Router
 - Context API for state management
 - CSS for styling
-
----
